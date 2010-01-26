@@ -1,6 +1,6 @@
 require 'echoe'
 
-Echoe.new("memcached") do |p|
+Echoe.new("memcache-auth") do |p|
   p.author = "Evan Weaver"
   p.project = "fauna"
   p.summary = "An interface to the libmemcached C client."
@@ -8,6 +8,7 @@ Echoe.new("memcached") do |p|
   p.docs_host = "blog.evanweaver.com:~/www/bax/public/files/doc/"
   p.rdoc_pattern = /README|TODO|LICENSE|CHANGELOG|BENCH|COMPAT|exceptions|behaviors|rails.rb|memcached.rb/
   p.clean_pattern += ["ext/lib", "ext/include", "ext/share", "ext/libmemcached-?.??", "ext/bin", "ext/conftest.dSYM"]
+  p.version = '1.0.1'
 end
 
 task :exceptions do
